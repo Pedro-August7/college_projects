@@ -30,7 +30,7 @@ jogadores_acora = [
 
 rst = df_anchor_20[df_anchor_20['long_name'].isin(jogadores_acora)]
 
-#print(rst)
+print(rst)
 
 # Exibindo tamanho final da tabela
 print(f'Linhas: {df_anchor_20.shape[0]}', f' Colunas: {df_anchor_20.shape[1]}')

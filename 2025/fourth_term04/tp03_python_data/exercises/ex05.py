@@ -10,7 +10,7 @@ conn = sqlite3.connect(':memory:')
 # DataFrame no banco
 df.to_sql('jogadores_20', conn, if_exists='replace', index=False)
 
-jogadores_acora = ['Cristiano Ronaldo', 'Harry Kane', 'Karim Benzema', 'Eden Hazard', 'Neymar Jr']
+jogadores_acora = ['Cristiano Ronaldo', 'H. Kane', 'K. Benzema', 'E. Hazard', 'Neymar Jr']
 
 # Consultando
 query = "SELECT * FROM jogadores_20 WHERE " + " OR ".join([f"short_name LIKE '{jogador}'" for jogador in jogadores_acora])

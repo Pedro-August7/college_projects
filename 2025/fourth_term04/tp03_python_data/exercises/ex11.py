@@ -32,8 +32,8 @@ jogadores_acora = [
 
 # Criando DataFrame consolidando informações
 
-df_20_filter  =df_20[df_20['short_name'].isin(jogadores_acora)]
-df_21_filter  =df_21[df_21['short_name'].isin(jogadores_acora)]
+df_20_filter  = df_20[df_20['short_name'].isin(jogadores_acora)]
+df_21_filter  = df_21[df_21['short_name'].isin(jogadores_acora)]
 
 print('\n=== Filtrando Jogadores Âncora ===')
 

@@ -5,10 +5,10 @@ from connect import conexao_eng
 import argparse
 
 # Carregando os dados do JSON
-with open(r'C:\Users\Pedrox\OneDrive\Repositorios GitHub\college_work\tp4_project_block\files\carga.json', 'r') as file:
+with open(r'C:\Users\Pedrox\OneDrive\Repositorios GitHub\college_projects\2025\fourth_term04\tp04_project_block\file\JSON\carga.json', 'r') as file:
     data = json.load(file)
 
-with open(r'C:\Users\Pedrox\OneDrive\Repositorios GitHub\college_work\tp4_project_block\files\delete.json', 'r') as file:
+with open(r'C:\Users\Pedrox\OneDrive\Repositorios GitHub\college_projects\2025\fourth_term04\tp04_project_block\file\JSON\delete.json', 'r') as file:
     data02 = json.load(file)
 
 # Criando o engine de conexão com o banco

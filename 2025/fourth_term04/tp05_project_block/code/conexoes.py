@@ -2,7 +2,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 from dotenv import load_dotenv
-
 import os
 
 load_dotenv(dotenv_path=r'C:\Users\Pedrox\OneDrive\Repositorios GitHub\college_projects\2025\fourth_term04\tp04_project_block\file\security\.env')

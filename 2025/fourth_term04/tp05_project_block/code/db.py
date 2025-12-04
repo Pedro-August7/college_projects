@@ -3,8 +3,8 @@ from conexoes import conexao_eng
 from datetime import datetime
 from sqlalchemy import create_engine, text
 
-# Só roda se for o arquivo main
-if __name__ == '__main__':
+
+def db_extracao_dados():
 
     dados_clima = extracao_html_clear()
     
@@ -13,8 +13,7 @@ if __name__ == '__main__':
 
         # Criando conexão
         engine = conexao_eng()
-        url_visitada = 'https://www.climatempo.com.br/previsao-do-tempo/cidade/3348/itabirito-mg'
-
+        
         if engine:
             with engine.connect() as conn:
                 try:
@@ -28,15 +27,15 @@ if __name__ == '__main__':
                         """
                         )
                     
-                    resutado_query = conn.execute(sql_pai, {'url': url_visitada, 'data': datetime.now()})
-                    id_gerado = resutado_query.fetchone()[0]
+                    resultado_query = conn.execute(sql_pai, {'url': url_visitada, 'data': datetime.now()})
+                    id_gerado = resultado_query.fetchone()[0]
 
                     print(f"Visita registrada! ID gerado: {id_gerado}")
 
                     sql_filho = text(
                         """
-                        INSERT INTO pedro_silva_pb_tp05.dados_coletados (xid_paginas, cidade, temperatura, chuva, vento, umidade_ar, arco_iris, sol)
-                        VALUES (:id_pai, :cidade, :temp_min, :temp_max, :chuva, :vento, :umidade_min, :umidade_max, :arco_iris, :sol);
+                        INSERT INTO pedro_silva_pb_tp05.dados_coletados (xid_paginas, cidade, umidade_min, chuva, vento, temp_min, arco_iris, sol, temp_max, umidade_max)
+                        VALUES (:id_pai, :cidade, :umidade_min, :chuva, :vento, :temp_min, :arco_iris, :sol, :temp_max, :umidade_max);
                         """
                     )
 
@@ -44,7 +43,7 @@ if __name__ == '__main__':
                     "id_pai": id_gerado,
                     "cidade": result['city'], 
                     "temp_min": result['temp_min'],
-                    "temp_max": result['temp_max'],
+                    "temp_max": result['temp_max'], 
                     "chuva": result['chuva'],
                     "vento": result['vento'],
                     "umidade_min": result['umidade_min'],
@@ -65,4 +64,5 @@ if __name__ == '__main__':
         print("O robô não conseguiu extrair dados, então nada será salvo no banco.")
 
 
-
+if __name__ == '__main__':
+    db_extracao_dados()

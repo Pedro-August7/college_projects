@@ -1,10 +1,14 @@
-import { useState } from "react";
-import FullScreen from "../../../../global_module/fullScreenContainer.module.css";
+import styled from "styled-components";
+import { Card } from "../../../../components/Card";
 
-export default function Container() {
+export default function Container({ dados }) {
   return (
     <>
-      <FullScreen></FullScreen>
+      <Card valorClassificacao={dados.classificacao}>
+        <h2>{dados.titulo}</h2>
+        <p>Autor: {dados.autor}</p>
+        <p>Classificação: {dados.classificacao}</p>
+      </Card>
     </>
   );
 }

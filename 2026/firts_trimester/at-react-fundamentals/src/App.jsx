@@ -33,7 +33,7 @@ export default function App() {
       {/* <Ex13 /> */}
       {/* <Ex14 /> */}
       {/* <Ex15 /> */}
-      <Ex16 />
+      {/* <Ex16 /> */}
     </>
   );
 }

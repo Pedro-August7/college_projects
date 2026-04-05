@@ -11,6 +11,15 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   }
 
+  function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setMenuOpen(false);
+  }
+
   function handleNavClick(e, targetId) {
     e.preventDefault();
     const section = document.querySelector(targetId);
@@ -45,8 +54,9 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${visible ? "" : styles.hidden}`}>
       <div className={styles.container}>
-        <h1 className={styles.logo}>Enéas Carneiro</h1>
-
+        <a href="#home" className={styles.logo} onClick={scrollToTop}>
+          Enéas Carneiro
+        </a>
         <button className={styles.hamburger} onClick={toggleMenu} aria-label="Abrir menu">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>

@@ -7,7 +7,7 @@ export default function Biografia() {
   useEffect(() => {
     async function fetchBiografia() {
       try {
-        const response = await fetch("https://dadosabertos.camara.leg.br/api/v2/deputados/74847");
+        const response = await fetch("https://dadosabertos.camara.leg.br/api/v2/deputados/74269");
 
         const data = await response.json();
         setBio(data.dados);
@@ -27,7 +27,7 @@ export default function Biografia() {
     <section id="biografia" className={styles.biografia}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <img src={bio.urlFoto} alt={bio.nomeCivil} className={styles.image} />
+          <img src={bio.urlFoto} className={styles.image} />
         </div>
 
         <div className={styles.content}>

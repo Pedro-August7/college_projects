@@ -1,7 +1,9 @@
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 3rem 1.5rem;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
 }
 
 .titulo {

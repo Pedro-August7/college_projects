@@ -4,18 +4,18 @@ export default function Videos() {
   const videos = [
     {
       id: "v1",
-      youtubeId: "dQw4w9WgXcQ",
-      titulo: "Discurso Histórico",
+      youtubeId: "5zLq7jXwd7Q",
+      titulo: "Dr. Enéas - Congresso Mineiro",
     },
     {
       id: "v2",
-      youtubeId: "3GwjfUFyY6M",
-      titulo: "Entrevista Clássica",
+      youtubeId: "pmxTbANqGJI",
+      titulo: "Dr. Enéas - 1989 - Trecho de coletiva de imprensa",
     },
     {
       id: "v3",
-      youtubeId: "kJQP7kiw5Fk",
-      titulo: "Momento de Campanha",
+      youtubeId: "54CXNpeUWgM",
+      titulo: " Dr. Enéas em 89 - P03 - Político Profissional - 15 segundos ",
     },
   ];
 

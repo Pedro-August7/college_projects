@@ -18,7 +18,7 @@ html {
 :root {
   --color-bg-main: #ffffff;
   --color-surface: #f5f7fa;
-  --color-card: #ffffff;
+  --color-card: #faf9f7;
 
   --color-text-primary: #111111;
   --color-text-secondary: #4b5563;
@@ -49,4 +49,6 @@ html {
 body {
   background: var(--color-bg-main);
   color: var(--color-text-primary);
+  overflow-x: hidden;
+  width: 100%;
 }

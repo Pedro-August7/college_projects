@@ -7,19 +7,19 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.social}>
-          <a href="https://www.facebook.com/EneasCarneiro.Br/" aria-label="Facebook">
+          <a href="https://www.facebook.com/EneasCarneiro.Br/" target="blank" aria-label="Facebook">
             <FaFacebookF />
           </a>
 
-          <a href="https://www.instagram.com/eneasoficial/" aria-label="Instagram">
+          <a href="https://www.instagram.com/eneasoficial/" target="blank" aria-label="Instagram">
             <FaInstagram />
           </a>
 
-          <a href="https://www.youtube.com/user/EneasTV" aria-label="YouTube">
+          <a href="https://www.youtube.com/user/EneasTV" target="blank" aria-label="YouTube">
             <FaYoutube />
           </a>
 
-          <a href="https://x.com/EneasProna01" aria-label="X Twitter">
+          <a href="https://x.com/EneasProna01" target="blank" aria-label="X Twitter">
             <FaXTwitter />
           </a>
         </div>

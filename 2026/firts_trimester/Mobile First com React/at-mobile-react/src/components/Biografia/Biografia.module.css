@@ -1,0 +1,71 @@
+.biografia {
+  padding: 48px 16px;
+  background: var(--color-surface);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.imageWrapper {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40%;
+  }
+
+  .content {
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 60%;
+
+    text-align: left;
+  }
+}

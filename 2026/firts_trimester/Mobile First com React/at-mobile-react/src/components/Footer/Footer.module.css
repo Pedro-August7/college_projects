@@ -1,0 +1,61 @@
+.footer {
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
+  border-top: 1px solid var(--color-border);
+
+  padding: 2rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social a {
+  color: var(--text);
+  font-size: 1.4rem;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+.contato p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .copy {
+    text-align: right;
+  }
+}

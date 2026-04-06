@@ -27,7 +27,7 @@ export default function Biografia() {
     <section id="biografia" className={styles.biografia}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <img src={bio.urlFoto} className={styles.image} />
+          <img src={bio.ultimoStatus?.urlFoto} alt={bio.nomeCivil} className={styles.image} />
         </div>
 
         <div className={styles.content}>

@@ -33,4 +33,13 @@ export const propostas = [
   },
 ];
 
-export const propostasExtras = ["Programa Jovem Profissional", "Wi-Fi público gratuito", "Incentivo ao esporte", "Digitalização de serviços", "Apoio ao pequeno comércio", "Iluminação inteligente"];
+export const propostasExtras = [
+  "Programa Jovem Profissional",
+  "Wi-Fi público gratuito",
+  "Incentivo ao esporte",
+  "Digitalização de serviços",
+  "Apoio ao pequeno comércio",
+  "Iluminação inteligente",
+  "Ampliação da segurança pública",
+  "Investimento em educação técnica",
+];

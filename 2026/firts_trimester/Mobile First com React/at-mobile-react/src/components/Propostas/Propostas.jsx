@@ -1,7 +1,5 @@
 import styles from "./Propostas.module.css";
-
-import { Card, CardContent, Typography } from "@mui/material";
-
+import { Card, CardContent, Typography, Box } from "@mui/material";
 import { propostas, propostasExtras } from "./propostasData";
 
 export default function Propostas() {
@@ -14,7 +12,17 @@ export default function Propostas() {
           const Icon = item.icon;
 
           return (
-            <Card key={index} className={styles.card}>
+            <Card
+              key={index}
+              className={styles.card}
+              sx={{
+                "&:hover": {
+                  transform: "translateY(-8px)",
+                  boxShadow: 6,
+                  transition: "all 0.3s ease-in-out",
+                },
+              }}
+            >
               <CardContent>
                 <Icon className={styles.icon} />
 
@@ -30,13 +38,29 @@ export default function Propostas() {
       </div>
 
       <div className={styles.listaContainer}>
-        <h3>Outras propostas</h3>
+        <h3>Outras Propostas</h3>
 
         <ul className={styles.listaFlex}>
           {propostasExtras.map((item, index) => (
-            <li key={index} className={styles.listaItem}>
+            <Box
+              key={index}
+              component="li"
+              className={styles.listaItem}
+              sx={{
+                cursor: "pointer",
+                transition: "all 0.3s ease-in-out",
+                border: "1px solid transparent",
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  backgroundColor: "var(--color-card)",
+                  borderColor: "var(--color-primary)",
+                  color: "var(--color-primary)",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                },
+              }}
+            >
               {item}
-            </li>
+            </Box>
           ))}
         </ul>
       </div>
